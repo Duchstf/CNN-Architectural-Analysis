@@ -7,10 +7,10 @@ Each folder MINERvA-Vertex-Finding and MINERvA-Hadron-Multiplicity contains two 
 ## Raw data source
 For those who are interested in the raw prototxt files from MENNDL, from which the features are extracted from. If you have access to the Wilson Cluster at Fermilab, the file paths are the followings:
 
-**Image files that the networks were trained on: ** `/data/jhamer/minerva_imgs/hadmultkineimgs_127x94_me1Amc.hdf5`
+**Image files that the networks were trained on:** `/data/jhamer/minerva_imgs/hadmultkineimgs_127x94_me1Amc.hdf5`
 
-**MINERvA Vertex Finding Networks: **
-- **First Population: ** `/data/jhamer/minerva_networks/networks/`
-- **Second Population: ** `/lfstev/e-938/aghosh12/minerva_174plane/logs`
+**MINERvA Vertex Finding Networks:**
+- **First Population:** `/data/jhamer/minerva_networks/networks/`
+- **Second Population:** `/lfstev/e-938/aghosh12/minerva_174plane/logs`
 
-**MINERvA Hadron Multiplicity Networks: ** `/lfstev/e-938/aghosh12/minerva_multi/logs`
+**MINERvA Hadron Multiplicity Networks:** `/lfstev/e-938/aghosh12/minerva_multi/logs`
