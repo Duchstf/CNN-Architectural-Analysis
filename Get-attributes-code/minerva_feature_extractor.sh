@@ -7,7 +7,11 @@
 #PBS -A minervaG
 #PBS -q amd32
 
-#NOTE: This shell script still works fine on Wilson Cluster. However, the Cluster uses a different kind of workload manager (SLURM). Thus the comments above are likely irrelevant (but ommitting them still doesn't work). I didn't have time to translate them all to SLURM so just leave it like that. More details about difference between PBS and SLURM can be found here: https://wilsonweb.fnal.gov/slurm.shtml
+#NOTE: This shell script still works fine on Wilson Cluster. 
+#However, the Cluster uses a different kind of workload manager (SLURM). 
+#Thus the comments above are likely irrelevant (but ommitting them still doesn't work). I didn't have 
+#time to translate them all to SLURM so just leave it like that. More details about difference between 
+#PBS and SLURM can be found here: https://wilsonweb.fnal.gov/slurm.shtml
 
 echo "Job ${PBS_JOBNAME} submitted from ${PBS_O_HOST} started "`date`" jobid ${PBS_JOBID}"
 
