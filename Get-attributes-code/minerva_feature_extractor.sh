@@ -22,6 +22,7 @@ export OUTPUT_PATH='/data/dhoang/minerva_hadron_multiplicity'
 export START_INDEX='1'
 export END_INDEX='5000'
 export MODE='minerva'
+
 singularity exec -B /lfstev:/lfstev network_topology.simg python3 MINERvA_NOvA_network_analysis/get_simple_attributes.py ${INPUT_PATH} ${OUTPUT_PATH} ${START_INDEX} ${END_INDEX} ${MODE}
 
 exit
