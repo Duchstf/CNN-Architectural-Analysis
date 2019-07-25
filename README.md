@@ -16,3 +16,5 @@ For those who are interested in the raw prototxt files from MENNDL, from which t
 - **Second Population:** `/lfstev/e-938/aghosh12/minerva_174plane/logs`
 
 **MINERvA Hadron Multiplicity Networks:** `/lfstev/e-938/aghosh12/minerva_multi/logs`
+
+**Singularity recipe to build an image:** [Link](https://github.com/Duchstf/CNN-Architectural-Analysis-SingularityImg)
