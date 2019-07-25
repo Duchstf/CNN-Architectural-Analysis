@@ -12,8 +12,8 @@ For those who are interested in the raw prototxt files from MENNDL, from which t
 **NOTE: Human Performance Benchmark for Hadron Mutliplicity problem in paper is evaluated on ramdomly drawn input images on the same data set.**
 
 **MINERvA Vertex Finding Networks:**
-- **First Population:** `/data/jhamer/minerva_networks/networks/`
-- **Second Population:** `/lfstev/e-938/aghosh12/minerva_174plane/logs`
+- First Population: `/data/jhamer/minerva_networks/networks/`
+- Second Population: `/lfstev/e-938/aghosh12/minerva_174plane/logs`
 
 **MINERvA Hadron Multiplicity Networks:** `/lfstev/e-938/aghosh12/minerva_multi/logs`
 
