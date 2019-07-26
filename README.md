@@ -9,7 +9,7 @@ Contains necessary Python code objects to extract architectural attributes from 
 
 - [caffe.proto](Get-attributes-code/caffe.proto) and [caffe_pb2.py](Get-attributes-code/caffe_pb2.py) contains the original Caffe network protobuf file, as well as the Python class compiled by Google's protobuf software. One minor modification was made to the original protobuf file in order to implement the "gradient scaler layer". Besides this, the file is the same as can be found on [Caffe's repository](https://github.com/BVLC/caffe). It should be noted that these files merely implement networks as protobuf messages. For full neural network functionality (like training and prediction), the user will need a deeper, more complete install of Caffe.
 
-- [caffe-prototxt-example](Get-attributes-code/caffe-prototxt-example/) contains examples of the original MINERvA's network prototxt and output files from which we extracted the architectural attributes and the network's accuracy from. 
+- [Network_prototxt_samples](/Get-attributes-code/Network_prototxt_samples/) contains examples of the original MINERvA's network prototxt and output files from which we extracted the architectural attributes and the network's accuracy from. 
 
 ## Raw data source
 For those who are interested in the raw prototxt files from MENNDL, from which the features are extracted from. If you have access to the Wilson Cluster at Fermilab, the file paths are the followings:
