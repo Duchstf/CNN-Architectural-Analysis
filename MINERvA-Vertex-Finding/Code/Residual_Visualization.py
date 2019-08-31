@@ -37,44 +37,47 @@ def regression_residual_plots(model_fit, dependent_var, data, size = [10,10]):
     # cook's distance, from statsmodels internals
     model_cooks = model_fit.get_influence().cooks_distance[0]
 
+    #Set x,y fontsize globally
+    plt.rc('xtick',labelsize=30)
+    plt.rc('ytick',labelsize=30)
+
     ########################################################################
     # Plot Size
     fig = plt.figure(figsize=size)
-    
     # Residual vs. Fitted
     ax = fig.add_subplot(2, 2, 1) # Top Left
     sns.residplot(model_fitted_y, dependent_var, data=data, 
                               lowess=True, 
                               scatter_kws={'alpha': 0.5}, 
-                              line_kws={'color': 'red', 'lw': 1, 'alpha': 0.8},
+                              line_kws={'color': 'red', 'lw': 3, 'alpha': 0.8},
                  ax=ax)
-    ax.set_title('Residuals vs Fitted')
-    ax.set_xlabel('Fitted values')
-    ax.set_ylabel('Residuals')
-
+    ax.set_title('Residuals vs Fitted', fontsize = 50)
+    ax.set_xlabel('Fitted values', fontsize = 50)
+    ax.set_ylabel('Residuals', fontsize = 50)
+    
     # Annotations of Outliers
-    abs_resid = model_abs_resid.sort_values(ascending=False)
-    abs_resid_top_3 = abs_resid[:3]
-    for i in abs_resid_top_3.index:
-        ax.annotate(i, xy=(model_fitted_y[i], model_residuals[i]));
+    #abs_resid = model_abs_resid.sort_values(ascending=False)
+    #abs_resid_top_3 = abs_resid[:3]
+    #for i in abs_resid_top_3.index:
+    #    ax.annotate(i, xy=(model_fitted_y[i], model_residuals[i]));
 
     ########################################################################
     # Normal Q-Q
     ax = fig.add_subplot(2, 2, 2) # Top Right
     QQ = sm.ProbPlot(model_norm_residuals)
-    QQ.qqplot(line='45', alpha=0.5, color='#4C72B0', lw=1, ax=ax)
-    ax.set_title('Normal Q-Q')
-    ax.set_xlabel('Theoretical Quantiles')
-    ax.set_ylabel('Standardized Residuals')
-
+    QQ.qqplot(line='45', alpha=0.5, color='#4C72B0', lw=3, ax=ax)
+    ax.set_title('Normal Q-Q', fontsize = 50)
+    ax.set_xlabel('Theoretical Quantiles',fontsize = 50)
+    ax.set_ylabel('Standardized Residuals',fontsize = 50)
     # Annotations of Outliers
-    abs_norm_resid = np.flip(np.argsort(np.abs(model_norm_residuals)), 0)
-    abs_norm_resid_top_3 = abs_norm_resid[:3]
-    for r, i in enumerate(abs_norm_resid_top_3):
-        ax.annotate(i, xy=(np.flip(QQ.theoretical_quantiles, 0)[r],
-                                model_norm_residuals[i]));
+    #abs_norm_resid = np.flip(np.argsort(np.abs(model_norm_residuals)), 0)
+    #abs_norm_resid_top_3 = abs_norm_resid[:3]
+    #for r, i in enumerate(abs_norm_resid_top_3):
+    #    ax.annotate(i, xy=(np.flip(QQ.theoretical_quantiles, 0)[r],
+    #                            model_norm_residuals[i]));
 
     ########################################################################
+    """
     # Scale-Location Plot
     ax = fig.add_subplot(2, 2, 3) # Bottom Left
     plt.scatter(model_fitted_y, model_norm_residuals_abs_sqrt, alpha=0.5)
@@ -93,7 +96,7 @@ def regression_residual_plots(model_fit, dependent_var, data, size = [10,10]):
         ax.annotate(i, 
                                    xy=(model_fitted_y[i], 
                                        model_norm_residuals_abs_sqrt[i]));
-
+    
     ########################################################################  
     # Cook's Distance Plot
     ax = fig.add_subplot(2, 2, 4) # Bottom Right
@@ -127,5 +130,6 @@ def regression_residual_plots(model_fit, dependent_var, data, size = [10,10]):
     graph(lambda x: np.sqrt((1 * p * (1 - x)) / x), 
           np.linspace(0.001, 0.200, 50)) # 1 line
     plt.legend(loc='upper right')
+    """
     plt.savefig('residual_plots.png',bbox_inches='tight')
     plt.show()
