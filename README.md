@@ -1,5 +1,5 @@
 # CNN-Architectural-Analysis
-Codes and data related to paper:
+Codes and data related to paper: https://arxiv.org/abs/2001.02160
 
 ## Files Summary
 Each folder [MINERvA-Vertex-Finding](MINERvA-Vertex-Finding) and [MINERvA-Hadron-Multiplicity](MINERvA-Hadron-Multiplicity) contains two sub-folders: Code and Data. There you can find the data and the analysis code that was used to produce the results in the paper.
